@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        
+        <title>Web Components and Web Services</title>
+        
+        <!-- import web components libraries -->
+        <script src="components/webcomponentsjs/webcomponents-lite.js"></script> 
+        <link rel="import" href="components/iron-input/iron-input.html">
+        <link rel="import" href="components/iron-ajax/iron-ajax.html">
+        <link rel="import" href="components/paper-styles/color.html">
+        <link rel="import" href="components/paper-styles/demo-pages.html">
+        <link rel="import" href="components/paper-button/paper-button.html">
+  
+        <link rel="import" href="student-element.html">
+    </head>
+    
+    
+    
+    <body>
+
+        <div class="vertical-section vertical-section-container centered">
+            <template is="dom-bind" id="app">               
+                <student-element></student-element>
+            </template>
+        </div>
+
+  
+<!--        <script>
+            window.addEventListener('WebComponentsReady', function(e) {
+            });
+        </script>           
+  -->
+    </body>
+    
+    
+    
+    
+</html>
