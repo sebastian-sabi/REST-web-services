@@ -48,7 +48,7 @@
             }
         </style>
 
-        <div style= "font-weight:bolder" >Student Details</div>
+        <div style= "font-weight:bolder" >Billing address</div>
         
         <div class="vertical-section centered">
             <paper-input  id="txtFirstname"  label="Firstname" value="[[firstname]]" > </paper-input>
@@ -58,14 +58,23 @@
         
         <br><br>
         
+<select>
+  <option value="volvo">Volvo</option>
+  <option value="http://localhost:8080/WebApplicationRest/rest/holiday/tourist" >Tourist</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+</select>
+        
+        <br><br>
+        
         <paper-button class="custom green"  on-click="onClickAction">set value</paper-button>
         <br><br>
-        <div style= "color:red" hidden$="{{ isMessagehidden }}" >Student Details updated via REST API</div>
+        <div style= "color:red" hidden$="{{ isMessagehidden }}" >Tourist Details updated via REST API</div>
 
 	<iron-ajax 
                id="hello_ajax" 
                method="GET"
-	       url="http://localhost:8080/WebApplicationRest/rest/course/student" 
+	       url="http://localhost:8080/WebApplicationRest/rest/holiday/tourist" 
 	       content-type="application/json"
                handle-as="json"
 	       on-response="_helloResponse">

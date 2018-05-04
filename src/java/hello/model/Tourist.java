@@ -1,13 +1,13 @@
 package hello.model;
 
-public class Student {
+public class Tourist {
     private String firstname;
     private String lastname;
     private String address;
     
-    public Student(){}
+    public Tourist(){}
     
-    public Student(String firstname, String lastname, String address){
+    public Tourist(String firstname, String lastname, String address){
         this.firstname = firstname;
         this.lastname = lastname;
         this.address = address;

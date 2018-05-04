@@ -1,6 +1,6 @@
 package hello;
 
-import hello.model.Student;
+import hello.model.Tourist;
 import java.math.BigDecimal;
 import javax.json.Json;
 import javax.json.JsonArray;
@@ -14,22 +14,22 @@ import javax.ws.rs.Path;
 
 // The Java class will be hosted at the URI path "/helloworld"
 
-@Path("/course")
-public class UniversityCourse {
+@Path("/holiday")
+public class Holiday {
     
     // The Java method will process HTTP GET requests
 
-    public static Student SAMPLE_TEST_STUDENT_DATA = new Student("John", "Wilson", "Ealing, London"); 
+    public static Tourist TOURIST_1 = new Tourist("John", "Wilson", "Ealing, London"); 
     
         @GET
-    @Path("student")
+    @Path("tourist")
     @Produces({ "application/json" })    
-    public JsonObject getStudent(){
-        Student student =  SAMPLE_TEST_STUDENT_DATA;
+    public JsonObject getTourist(){
+        Tourist tourist =  TOURIST_1;
         JsonObjectBuilder builder = Json.createObjectBuilder();
-        builder.add("firstname", student.getFirstname());
-        builder.add("lastname", student.getLastname());
-        builder.add("address", student.getAddress());
+        builder.add("firstname", tourist.getFirstname());
+        builder.add("lastname", tourist.getLastname());
+        builder.add("address", tourist.getAddress());
         return builder.build();
     }
      
