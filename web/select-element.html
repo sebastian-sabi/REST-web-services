@@ -1,0 +1,550 @@
+
+<link rel = 'import' href = 'components/polymer/polymer.html'>
+<link rel = "import" href = "components/paper-button/paper-button.html">
+<link rel = "import" href = "components/paper-styles/paper-styles.html">
+<link rel = "import" href = "components/paper-card/paper-card.html">
+<link rel = "import" href = "components/iron-icons/iron-icons.html">
+<link rel = "import" href = "components/iron-icons/communication-icons.html">
+<link rel = 'import' href = 'components/polymer/polymer.html'>
+<link rel = 'import' href = 'components/paper-toolbar/paper-toolbar.html'>
+
+
+
+
+<dom-module id="select-element">
+    
+    <template>
+      <style is = "custom-style">
+         body {
+            display: flex;
+           float: right;
+            justify-content: center;
+         }
+         
+         paper-card {
+            max-width: 500px;
+         }
+         
+         .cafe-header { @apply(--paper-font-headline); }
+         .cafe-light { color: var(--paper-grey-600); }
+         .cafe-location {
+            float: right;
+            font-size: 15px;
+            vertical-align: middle;
+         }
+         
+         .cafe-reserve { color: var(--google-blue-500); float:right; }
+         iron-icon.star {
+            --iron-icon-width: 16px;
+            --iron-icon-height: 16px;
+            color: var(--paper-amber-500);
+         }
+   
+      </style>
+<paper-toolbar>
+  <div slot="middle" class="title"> - ELDORADO - HOLIDAYS -</div>
+</paper-toolbar>
+
+      <br>      <br>
+
+<paper-card image="images/activity1.jpg">
+  <div class="card-content">
+    <div class="cafe-header">Vietnam
+      <div class="cafe-location cafe-light">
+        <iron-icon icon="communication:location-on"></iron-icon>
+        <span>6,087.23 mi</span>
+      </div>
+    </div>
+    <div class="cafe-rating">
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+    </div>
+    <p>$ &amp; VND   ・     All inclusive / Half board</p>
+    <p class="cafe-light">The restaurant offers vegetarian &amp; vegan menu choice.</p>
+  </div>
+  <div class="card-actions">
+    <div class="horizontal justified">
+      <paper-icon-button icon="icons:event"></paper-icon-button>
+
+      <paper-button class="cafe-reserve" on-click="reserve_btn">Reserve</paper-button>
+    </div>
+  </div>
+</paper-card>
+     
+      
+ 
+      <paper-card style="float: right" image="images/activity2.jpg">
+          
+  <div class="card-content">
+    <div class="cafe-header">Africa
+      <div class="cafe-location cafe-light">
+        <iron-icon icon="communication:location-on"></iron-icon>
+        <span>4,648.52 mi</span>
+      </div>
+    </div>
+    <div class="cafe-rating">
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+    </div>
+    <p>$ &amp; ZAR   ・     All inclusive / Half board</p>
+    <p class="cafe-light">The restaurant offers vegetarian &amp; vegan menu choice.</p>
+  </div>
+  <div class="card-actions">
+    <div class="horizontal justified">
+      <paper-icon-button icon="icons:event"></paper-icon-button>
+      <paper-button class="cafe-reserve" on-click="reserve_btn">Reserve</paper-button>
+    </div>
+  </div>
+</paper-card>
+           
+      
+      <paper-card image="images/activity3.jpg">
+  <div class="card-content">
+    <div class="cafe-header">Australia
+      <div class="cafe-location cafe-light">
+        <iron-icon icon="communication:location-on"></iron-icon>
+        <span>9,463.95 mi</span>
+      </div>
+    </div>
+    <div class="cafe-rating">
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+    </div>
+    <p>AUS $    ・     All inclusive / Half board</p>
+    <p class="cafe-light">The restaurant offers vegetarian &amp; vegan menu choice.</p>
+  </div>
+  <div class="card-actions">
+    <div class="horizontal justified">
+      <paper-icon-button icon="icons:event"></paper-icon-button>
+      <paper-button class="cafe-reserve" on-click="reserve_btn">Reserve</paper-button>
+    </div>
+  </div>
+</paper-card>
+            
+             <paper-card image="images/activity4.jpg">
+  <div class="card-content">
+    <div class="cafe-header">India
+      <div class="cafe-location cafe-light">
+        <iron-icon icon="communication:location-on"></iron-icon>
+        <span>4,581.78 mi</span>
+      </div>
+    </div>
+    <div class="cafe-rating">
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+    </div>
+    <p>RUPI     ・     All inclusive / Half board</p>
+    <p class="cafe-light">The restaurant offers vegetarian &amp; vegan menu choice.</p>
+  </div>
+  <div class="card-actions">
+    <div class="horizontal justified">
+      <paper-icon-button icon="icons:event"></paper-icon-button>
+      <paper-button class="cafe-reserve" on-click="reserve_btn">Reserve</paper-button>
+    </div>
+  </div>
+</paper-card>
+            
+             <paper-card image="images/activity5.png">
+  <div class="card-content">
+    <div class="cafe-header">Grand Canyon
+      <div class="cafe-location cafe-light">
+        <iron-icon icon="communication:location-on"></iron-icon>
+        <span>5,129.26 mi</span>
+      </div>
+    </div>
+    <div class="cafe-rating">
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+    </div>
+    <p>US $ ・ All inclusive / Half board</p>
+    <p class="cafe-light">The restaurant offers vegetarian &amp; vegan menu choice.</p>
+  </div>
+  <div class="card-actions">
+    <div class="horizontal justified">
+      <paper-icon-button icon="icons:event"></paper-icon-button>
+      <paper-button class="cafe-reserve" on-click="reserve_btn">Reserve</paper-button>
+    </div>
+  </div>
+</paper-card>
+            
+             <paper-card image="images/activity6.jpg">
+  <div class="card-content">
+    <div class="cafe-header">Atlantic city
+      <div class="cafe-location cafe-light">
+        <iron-icon icon="communication:location-on"></iron-icon>
+        <span>3,538.40 mi </span>
+      </div>
+    </div>
+    <div class="cafe-rating">
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+    </div>
+     <p>US $ ・ All inclusive / Half board</p>
+    <p class="cafe-light">The restaurant offers vegetarian &amp; vegan menu choice.</p>
+  </div>
+  <div class="card-actions">
+    <div class="horizontal justified">
+      <paper-icon-button icon="icons:event"></paper-icon-button>
+      <paper-button class="cafe-reserve" on-click="reserve_btn">Reserve</paper-button>
+    </div>
+  </div>
+</paper-card>
+            
+             <paper-card image="images/bahamas.jpg">
+  <div class="card-content">
+    <div class="cafe-header">Bahamas
+      <div class="cafe-location cafe-light">
+        <iron-icon icon="communication:location-on"></iron-icon>
+        <span>4,346.27 mi</span>
+      </div>
+    </div>
+    <div class="cafe-rating">
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+    </div>
+     <p>US $ ・ All inclusive / Half board</p>
+    <p class="cafe-light">The restaurant offers vegetarian &amp; vegan menu choice.</p>
+  </div>
+  <div class="card-actions">
+    <div class="horizontal justified">
+      <paper-icon-button icon="icons:event"></paper-icon-button>
+      <paper-button class="cafe-reserve" on-click="reserve_btn">Reserve</paper-button>
+    </div>
+  </div>
+</paper-card>
+            
+             <paper-card image="images/fuerteventura.jpg">
+  <div class="card-content">
+    <div class="cafe-header">Fuerteventura
+      <div class="cafe-location cafe-light">
+        <iron-icon icon="communication:location-on"></iron-icon>
+        <span>1,743.46 mi</span>
+      </div>
+    </div>
+    <div class="cafe-rating">
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+    </div>
+     <p>€ ・ All inclusive / Half board</p>
+    <p class="cafe-light">The restaurant offers vegetarian &amp; vegan menu choice.</p>
+  <div class="card-actions">
+    <div class="horizontal justified">
+      <paper-icon-button icon="icons:event"></paper-icon-button>
+      <paper-button class="cafe-reserve" on-click="reserve_btn">Reserve</paper-button>
+    </div>
+  </div>
+</paper-card>
+            
+             <paper-card image="images/grancanaria.jpg">
+  <div class="card-content">
+    <div class="cafe-header">Gran Canaria
+      <div class="cafe-location cafe-light">
+        <iron-icon icon="communication:location-on"></iron-icon>
+        <span>1,801.76 mi</span>
+      </div>
+    </div>
+    <div class="cafe-rating">
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+    </div>
+    <p>€ ・ All inclusive / Half board</p>
+    <p class="cafe-light">The restaurant offers vegetarian &amp; vegan menu choice.</p>
+  </div>
+  <div class="card-actions">
+    <div class="horizontal justified">
+      <paper-icon-button icon="icons:event"></paper-icon-button>
+      <paper-button class="cafe-reserve" on-click="reserve_btn">Reserve</paper-button>
+    </div>
+  </div>
+</paper-card>
+            
+            
+             <paper-card image="images/hawaii.jpg">
+  <div class="card-content">
+    <div class="cafe-header">Hawaii
+      <div class="cafe-location cafe-light">
+        <iron-icon icon="communication:location-on"></iron-icon>
+        <span>7,245.26 mi</span>
+      </div>
+    </div>
+    <div class="cafe-rating">
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+    </div>
+    <p>US $ ・ All inclusive / Half board</p>
+    <p class="cafe-light">The restaurant offers vegetarian &amp; vegan menu choice.</p>
+  </div>
+  <div class="card-actions">
+    <div class="horizontal justified">
+      <paper-icon-button icon="icons:event"></paper-icon-button>
+      <paper-button class="cafe-reserve" on-click="reserve_btn">Reserve</paper-button>
+    </div>
+  </div>
+</paper-card>
+            
+             <paper-card image="images/lanzarote.jpg">
+  <div class="card-content">
+    <div class="cafe-header">Lanzarote
+      <div class="cafe-location cafe-light">
+        <iron-icon icon="communication:location-on"></iron-icon>
+        <span> 1,700.76 mi</span>
+      </div>
+    </div>
+    <div class="cafe-rating">
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+    </div>
+    <p>€ ・ All inclusive / Half board</p>
+    <p class="cafe-light">The restaurant offers vegetarian &amp; vegan menu choice.</p>
+  </div>
+  <div class="card-actions">
+    <div class="horizontal justified">
+      <paper-icon-button icon="icons:event"></paper-icon-button>
+      <paper-button class="cafe-reserve" on-click="reserve_btn">Reserve</paper-button>
+    </div>
+  </div>
+</paper-card>
+            
+             <paper-card image="images/miami.jpg">
+  <div class="card-content">
+    <div class="cafe-header">Miami
+      <div class="cafe-location cafe-light">
+        <iron-icon icon="communication:location-on"></iron-icon>
+        <span>4,426 mi</span>
+      </div>
+    </div>
+    <div class="cafe-rating">
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+    </div>
+    <p>US $ ・ All inclusive / Half board</p>
+    <p class="cafe-light">The restaurant offers vegetarian &amp; vegan menu choice.</p>
+  </div>
+  <div class="card-actions">
+    <div class="horizontal justified">
+      <paper-icon-button icon="icons:event"></paper-icon-button>
+      <paper-button class="cafe-reserve" on-click="reserve_btn">Reserve</paper-button>
+    </div>
+  </div>
+</paper-card>
+            
+             <paper-card image="images/winter1.jpg">
+  <div class="card-content">
+    <div class="cafe-header">Switzerland
+      <div class="cafe-location cafe-light">
+        <iron-icon icon="communication:location-on"></iron-icon>
+        <span>660 mi</span>
+      </div>
+    </div>
+    <div class="cafe-rating">
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+    </div>
+    <p>€ ・ All inclusive / Half board</p>
+    <p class="cafe-light">The restaurant offers vegetarian &amp; vegan menu choice.</p>
+  </div>
+  <div class="card-actions">
+    <div class="horizontal justified">
+      <paper-icon-button icon="icons:event"></paper-icon-button>
+      <paper-button class="cafe-reserve" on-click="reserve_btn">Reserve</paper-button>
+    </div>
+  </div>
+</paper-card>
+        
+                         <paper-card image="images/winter2.jpg">
+  <div class="card-content">
+    <div class="cafe-header">Austria
+      <div class="cafe-location cafe-light">
+        <iron-icon icon="communication:location-on"></iron-icon>
+        <span>869 mi</span>
+      </div>
+    </div>
+    <div class="cafe-rating">
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+    </div>
+    <p>€ ・ All inclusive / Half board</p>
+    <p class="cafe-light">The restaurant offers vegetarian &amp; vegan menu choice.</p>
+  </div>
+  <div class="card-actions">
+    <div class="horizontal justified">
+      <paper-icon-button icon="icons:event"></paper-icon-button>
+      <paper-button class="cafe-reserve" on-click="reserve_btn">Reserve</paper-button>
+    </div>
+  </div>
+</paper-card>
+        
+                         <paper-card image="images/winter3.jpg">
+  <div class="card-content">
+    <div class="cafe-header">France
+      <div class="cafe-location cafe-light">
+        <iron-icon icon="communication:location-on"></iron-icon>
+        <span>524 mi</span>
+      </div>
+    </div>
+    <div class="cafe-rating">
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+    </div>
+    <p>€ ・ All inclusive / Half board</p>
+    <p class="cafe-light">The restaurant offers vegetarian &amp; vegan menu choice.</p>
+  </div>
+  <div class="card-actions">
+    <div class="horizontal justified">
+      <paper-icon-button icon="icons:event"></paper-icon-button>
+      <paper-button class="cafe-reserve" on-click="reserve_btn">Reserve</paper-button>
+    </div>
+  </div>
+</paper-card>
+        
+
+             <paper-card image="images/winter4.jpeg">
+  <div class="card-content">
+    <div class="cafe-header">Italy
+      <div class="cafe-location cafe-light">
+        <iron-icon icon="communication:location-on"></iron-icon>
+        <span>1,173 mi</span>
+      </div>
+    </div>
+    <div class="cafe-rating">
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+    </div>
+    <p>€ ・ All inclusive / Half board</p>
+    <p class="cafe-light">The restaurant offers vegetarian &amp; vegan menu choice.</p>
+  </div>
+  <div class="card-actions">
+    <div class="horizontal justified">
+      <paper-icon-button icon="icons:event"></paper-icon-button>
+      <paper-button class="cafe-reserve" on-click="reserve_btn">Reserve</paper-button>
+    </div>
+  </div>
+</paper-card>
+        
+                         <paper-card image="images/winter5.jpg">
+  <div class="card-content">
+    <div class="cafe-header">Norway
+      <div class="cafe-location cafe-light">
+        <iron-icon icon="communication:location-on"></iron-icon>
+        <span>1,141 mi</span>
+      </div>
+    </div>
+    <div class="cafe-rating">
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+    </div>
+    <p>€ ・ All inclusive / Half board</p>
+    <p class="cafe-light">The restaurant offers vegetarian &amp; vegan menu choice.</p>
+  </div>
+  <div class="card-actions">
+    <div class="horizontal justified">
+      <paper-icon-button icon="icons:event"></paper-icon-button>
+      <paper-button class="cafe-reserve" on-click="reserve_btn">Reserve</paper-button>
+    </div>
+  </div>
+</paper-card>
+        
+                         <paper-card image="images/winter6.jpg">
+                             <br><br><br><br>
+  <div class="card-content">
+    <div class="cafe-header">Sweden
+      <div class="cafe-location cafe-light">
+        <iron-icon icon="communication:location-on"></iron-icon>
+        <span>1,251 mi</span>
+      </div>
+    </div>
+    <div class="cafe-rating">
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+      <iron-icon class="star" icon="star"></iron-icon>
+    </div>
+    <p>€ ・ All inclusive / Half board</p>
+    <p class="cafe-light">The restaurant offers vegetarian &amp; vegan menu choice.</p>
+  </div>
+  <div class="card-actions">
+    <div class="horizontal justified">
+      <paper-icon-button icon="icons:event"></paper-icon-button>
+      <paper-button class="cafe-reserve" on-click="reserve_btn">Reserve</paper-button>
+    </div>
+  </div>
+</paper-card>
+       
+                       
+        
+        
+           </template>
+        
+     <script>
+        // CONTROLLER
+        Polymer({
+            is: "select-element",
+            // add properties and methods on the element's prototype
+             ready: function() {
+            this.async(function() {
+            });
+         },
+         reserve_btn: function(e){
+         var newUrl = "http://localhost:8080/WebApplicationRest/index.html";
+         window.location.replace(newUrl);
+         },
+      });
+                
+                </script>
+    
+        </dom-module>
+    
+
+        

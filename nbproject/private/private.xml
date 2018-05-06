@@ -2,6 +2,16 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/Users/sebastiansmith/NetBeansProjects/WebApplicationRest/web/select-element.html</file>
+            <file>file:/Users/sebastiansmith/NetBeansProjects/WebApplicationRest/web/select.html</file>
+            <file>file:/Users/sebastiansmith/NetBeansProjects/WebApplicationRest/web/holiday-element.html</file>
+            <file>file:/Users/sebastiansmith/NetBeansProjects/WebApplicationRest/src/java/hello/JaxRsActivator.java</file>
+            <file>file:/Users/sebastiansmith/NetBeansProjects/WebApplicationRest/web/confirm-element.html</file>
+            <file>file:/Users/sebastiansmith/NetBeansProjects/WebApplicationRest/web/button-element.html</file>
+            <file>file:/Users/sebastiansmith/NetBeansProjects/WebApplicationRest/web/index.html</file>
+            <file>file:/Users/sebastiansmith/NetBeansProjects/WebApplicationRest/src/java/hello/Holiday.java</file>
+            <file>file:/Users/sebastiansmith/NetBeansProjects/WebApplicationRest/src/java/hello/model/Destination.java</file>
+        </group>
     </open-files>
 </project-private>

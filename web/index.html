@@ -13,18 +13,25 @@
         <link rel="import" href="components/paper-styles/color.html">
         <link rel="import" href="components/paper-styles/demo-pages.html">
         <link rel="import" href="components/paper-button/paper-button.html">
-  
-        <link rel="import" href="tourist-element.html">
+        <link rel="import" href="components/paper-input/paper-input.html">
+
+        <link rel="import" href="button-element.html">
+        <link rel="import" href="holiday-element.html">
     </head>
     
     
     
-    <body>
+    <body> 
+
 
         <div class="vertical-section vertical-section-container centered">
-            <template is="dom-bind" id="app">               
-                <student-element></student-element>
+            <template is="dom-bind" id="app"> 
+           
+                <holiday-element choice = "First choice" ></holiday-element>
+                <button-element></button-element>
+
             </template>
+            
         </div>
 
   
@@ -33,9 +40,14 @@
             });
         </script>           
   -->
+  
+  
+     
     </body>
     
-    
-    
+ 
+
     
 </html>
+
+  

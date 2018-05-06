@@ -1,0 +1,178 @@
+
+<link rel="import" href="components/paper-input/paper-input.html">
+<link rel="import" href="components/iron-image/iron-image.html">
+
+      
+      
+<dom-module id="holiday-element">
+    
+    <template>
+        
+        <!-- CSS rules for your element -->
+        <!-- CSS rules for your element -->
+        <style is="custom-style">
+            paper-button.custom {
+                --paper-button-ink-color: var(--paper-pink-a200);
+                /* These could also be individually defined for each of the
+                specific css classes, but we'll just do it once as an example */
+                --paper-button-flat-keyboard-focus: {
+                    background-color: var(--paper-pink-a200);
+                    color: white !important;
+                };
+                --paper-button-raised-keyboard-focus: {
+                    background-color: var(--paper-pink-a200) !important;
+                    color: white !important;
+                };
+            }
+            paper-button.custom:hover {
+                background-color: var(--paper-indigo-100);
+            }
+            paper-button.pink {
+                color: var(--paper-pink-a200);
+            }
+            paper-button.indigo {
+                background-color: var(--paper-indigo-500);
+                color: white;
+                --paper-button-raised-keyboard-focus: {
+                    background-color: var(--paper-pink-a200) !important;
+                    color: white !important;
+                };
+            }
+            paper-button.green {
+                background-color: var(--paper-green-500);
+                color: white;
+            }
+            paper-button.green[active] {
+                background-color: var(--paper-red-500);
+            }
+            paper-button.disabled {
+                color: white;
+            }
+        </style>
+                <paper-input  style= "font-weight:900" id="choice" value="{{ choice }}"></paper-input>
+        <br><br>
+
+<select id="location" style="width:70%;height:5%;font-size:14px;">
+  <option value="#">Select</option>
+  <option value="lanzarotte">Lanzarotte</option>
+  <option value="granCanaria">Gran Canaria</option>
+  <option value="miami">Miami</option>
+  <option value="bahamas">Bahamas</option>
+  <option value="fuerteventura">Fuerteventura</option>
+  <option value="hawaii">Hawaii</option>
+  <option value="vietnam">Vietnam</option>
+  <option value="sri_lanka">Sri Lanka</option>
+  <option value="australia">Australia</option>
+  <option value="india">India</option>
+  <option value="grand_canyon">Grand Canyon</option>
+  <option value="atlantis_city">Atlanta city</option>
+  <option value="switzerland">Switzerland</option>
+  <option value="france">France</option>
+  <option value="italy">Italy</option>
+  <option value="norway">Norway</option>
+  <option value="sweden">Sweden</option>
+
+
+
+</select>
+        <paper-button style="float: right" class="custom green"  on-click="onClickAction">set value</paper-button>
+
+
+        <br><br><br>
+        <div class="vertical-section centered">
+            <paper-input  id="txtCountry"  label="Country" value="[[country]]" > </paper-input>
+            <paper-input  id="txtPlace"  label="Place" value="[[place]]" > </paper-input>
+            <paper-input  id="txtHotel"  label="Hotel" value="[[hotel]]"  > </paper-input>
+            <paper-input  id="txtRating" label="Rating" value="[[rating]]"  > </paper-input>
+            <paper-input  id="txtPool" label="Pool" value="[[pool]]"  > </paper-input>
+            <paper-input  id="txtCurrency" label="Currency" value="[[currency]]"  > </paper-input>
+            <paper-input  id="txtRestaurant" label="Restaurant" value="[[restaurant]]"  > </paper-input>
+            
+
+            
+        </div>
+        
+        <br><br>
+        
+
+
+        <div style= "color:red" hidden$="{{ isMessagehidden }}" >Press 'ADD' button to confirm choice</div>
+<br><br><br><br>
+	<iron-ajax 
+               id="hello_ajax" 
+               method="GET"
+	       url = null
+	       content-type="application/json"
+               handle-as="json"
+	       on-response="_helloResponse">
+	</iron-ajax>     
+
+    </template>
+
+    
+    
+
+    <script>
+        // CONTROLLER
+        Polymer({
+            is: "holiday-element",
+            // add properties and methods on the element's prototype
+            properties: {
+                // MODEL
+                choice33: Number,
+                country: String,
+                place: String,
+                hotel: String,
+                rating: String,
+                pool: String,
+                currency: String,
+                restaurant: String,
+                
+                                successImg:{
+                    type:Boolean,
+                    value:true
+                },
+
+                isMessagehidden: {
+                    type:Boolean,
+                    value:true
+                }
+            },
+            
+
+            onClickAction: function (e) {
+                this.$.hello_ajax.url = "http://localhost:8080/WebApplicationRest/rest/holiday/" + document.getElementById("location").value;
+         	this.$.hello_ajax.generateRequest();	
+            },
+            
+            
+            _helloResponse: function (request) {
+	      	   var value = request.detail.response;
+                   this.country = value.country; 
+                   this.place = value.place; 
+                   this.hotel = value.hotel; 
+                   this.rating = value.rating;
+                   this.pool = value.pool;
+                   this.currency = value.currency;
+                   this.restaurant = value.restaurant;
+                   
+                   // show message
+                   this.isMessagehidden = false;
+            },
+            
+      
+            
+            
+        });
+    </script>
+    
+    
+    
+    
+</dom-module>
+
+<!--var queue = [];
+queue.push(2);         // queue is now [2]
+queue.push(5);         // queue is now [2, 5]
+var i = queue.shift(); // queue is now [5]
+alert(i); -->
